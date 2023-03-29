@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">75 Hard Challenge</string>
+    <string name="alarm">Alarm</string>
+    <string name="workout">Workout</string>
+    <string name="rules">Rules</string>
+    <string name="browser">Browser</string>
+    <string name="your_profile">Your Profile</string>
 </resources>
