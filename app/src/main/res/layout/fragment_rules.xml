@@ -1,6 +1,240 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="334dp"
+        android:layout_height="123dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        >
+        <ImageView
+            android:layout_width="334dp"
+            android:layout_height="123dp"
+            android:src="@drawable/rules_banner_bg"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="150dp"
+            android:layout_marginStart="155dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="28dp"
+            android:src="@drawable/rules_banner_bg_image" />
+        <TextView
+            android:layout_width="140dp"
+            android:layout_height="27dp"
+            android:layout_marginTop="34dp"
+            android:text="Good Morning!"
+            android:textColor="@color/white"
+            android:fontFamily="@font/open_sans_light"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="183dp"
+            android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/user_name"
+            android:fontFamily="@font/open_sans_light"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:text="Abhishek Tyagi"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="59dp"/>
+
+
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="161dp"
+        android:layout_height="27dp"
+        android:text="Today's Progress"
+        android:fontFamily="@font/open_sans_light"
+        android:textColor="@color/black_project"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="17dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CBCBCB"
+        android:layout_marginTop="185dp"
+        />
+    <TextView
+        android:layout_width="302dp"
+        android:layout_height="57dp"
+        android:fontFamily="@font/open_sans_light"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:layout_marginTop="195dp"
+        android:layout_marginStart="17dp"
+        android:text="Change is the law of life and those who look \n only to the past or present are certain to miss the future."/>
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:layout_width="312dp"
+        android:layout_height="5dp"
+        android:background="@color/white"
+        app:trackColor="@color/black"
+        android:layout_marginTop="265dp"
+        />
+    <TextView
+        android:layout_width="132dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="275dp"
+        android:text="You’re almost there."
+        android:layout_marginStart="16dp"/>
+
+    <TextView
+        android:layout_width="212dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="347dp"
+        android:fontFamily="@font/open_sans_light"
+        android:textStyle="bold"
+        android:text="Take a progress picture."
+        android:textColor="@color/black" />
+
+    <ImageView
+        android:layout_width="21dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="349.5dp"
+        android:src="@drawable/rules_task_select" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CBCBCB"
+        android:layout_marginTop="370dp"
+        />
+
+    <TextView
+        android:text="Drink 1 gallon of water."
+        android:layout_width="212dp"
+        android:layout_height="26dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="387dp"
+        android:fontFamily="@font/open_sans_light"
+        android:textStyle="bold"
+        android:layout_marginStart="58dp"/>
+    <ImageView
+        android:layout_width="21dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="387.5dp"
+        android:src="@drawable/rules_task_select" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CBCBCB"
+        android:layout_marginTop="410dp"
+        />
+    <TextView
+        android:fontFamily="@font/open_sans_light"
+        android:textStyle="bold"
+        android:text="Workout outside for 45 minutes. "
+        android:layout_width="212dp"
+        android:textColor="@color/black"
+        android:layout_height="26dp"
+        android:layout_marginTop="427dp"
+        android:layout_marginStart="58dp"/>
+    <ImageView
+        android:layout_width="21dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="427.5dp"
+        android:src="@drawable/rules_task_select" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CBCBCB"
+        android:layout_marginTop="450dp"
+        />
+    <TextView
+        android:text="Workout inside for 45 minutes. "
+        android:fontFamily="@font/open_sans_light"
+        android:textStyle="bold"
+        android:layout_width="212dp"
+        android:layout_height="26dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="467dp"
+        android:layout_marginStart="58dp"/>
+    <ImageView
+        android:layout_width="21dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="467.5dp"
+        android:src="@drawable/rules_task_select" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CBCBCB"
+        android:layout_marginTop="490dp"
+        />
+    <TextView
+        android:fontFamily="@font/open_sans_light"
+        android:textStyle="bold"
+        android:text="Read 10 pages from a book."
+        android:layout_width="212dp"
+        android:layout_height="26dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="507dp"
+        android:layout_marginStart="58dp"/>
+    <ImageView
+        android:layout_width="21dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="507.5dp"
+        android:src="@drawable/rules_task_select" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CBCBCB"
+        android:layout_marginTop="530dp"
+        />
+    <TextView
+        android:fontFamily="@font/open_sans_light"
+        android:textStyle="bold"
+        android:text="Follow a proper diet plan."
+        android:layout_width="212dp"
+        android:layout_height="26dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="547dp"
+        android:layout_marginStart="58dp"/>
+    <ImageView
+        android:layout_width="21dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="547.5dp"
+        android:src="@drawable/rules_task_select" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CBCBCB"
+        android:layout_marginTop="570dp"
+        />
+    <TextView
+        android:fontFamily="@font/open_sans_light"
+        android:textStyle="bold"
+        android:text="No alcohol or cheat meals."
+        android:textColor="@color/black"
+        android:layout_width="212dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="587dp"
+        android:layout_marginStart="58dp"/>
+    <ImageView
+        android:layout_width="21dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="350dp"
+        android:layout_marginTop="587.5dp"
+        android:src="@drawable/rules_task_select" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#CBCBCB"
+        android:layout_marginTop="610dp"
+        />
 </RelativeLayout>
