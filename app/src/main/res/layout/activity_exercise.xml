@@ -3,16 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ExerciseActivity"
+    tools:context=".Activities.ExerciseActivity"
     android:orientation="vertical"
     android:background="@color/white">
 
-    <androidx.appcompat.widget.Toolbar
+    <!-- Reminders  <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_exercise_activity"
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
         android:background="#03989e"
-        android:textAlignment="center"/>
+        android:textAlignment="center"/>-->
 
     <LinearLayout
         android:id="@+id/llRestView"

@@ -9,41 +9,58 @@
         android:layout_height="123dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="15dp"
+        app:cardUseCompatPadding="false"
+        android:requiresFadingEdge="vertical"
+        android:forceHasOverlappingRendering="false"
+        app:cardCornerRadius="10dp"
+        android:outlineProvider="background"
+        android:backgroundTint="#DA85D6F8"
         >
+ <ImageView
+            android:id="@+id/camPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
         <ImageView
             android:layout_width="334dp"
             android:layout_height="123dp"
-            android:src="@drawable/rules_banner_bg"/>
+            android:src="@drawable/rules_banner_bg"
+            android:scaleType="centerCrop"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
+            android:id="@+id/day_time_img"
+            android:layout_width="141dp"
+            android:scaleType="centerCrop"
+            android:layout_height="match_parent"
             android:layout_marginStart="155dp"
             android:layout_marginEnd="4dp"
             android:layout_marginBottom="28dp"
             android:src="@drawable/rules_banner_bg_image" />
+
         <TextView
             android:layout_width="140dp"
             android:layout_height="27dp"
+            android:layout_marginStart="16dp"
             android:layout_marginTop="34dp"
+            android:layout_marginEnd="183dp"
+
             android:text="Good Morning!"
             android:textColor="@color/white"
-            android:fontFamily="@font/open_sans_light"
-            android:textStyle="bold"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="183dp"
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/user_name"
-            android:fontFamily="@font/open_sans_light"
-            android:textColor="@color/white"
-            android:textStyle="bold"
-            android:textSize="14sp"
             android:layout_width="wrap_content"
             android:layout_height="19dp"
-            android:text="Abhishek Tyagi"
             android:layout_marginStart="20dp"
-            android:layout_marginTop="59dp"/>
+            android:layout_marginTop="59dp"
+
+            android:text="Abhishek Tyagi"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
 
 
     </androidx.cardview.widget.CardView>
@@ -51,7 +68,7 @@
         android:layout_width="161dp"
         android:layout_height="27dp"
         android:text="Today's Progress"
-        android:fontFamily="@font/open_sans_light"
+
         android:textColor="@color/black_project"
         android:textStyle="bold"
         android:textSize="20dp"
@@ -64,45 +81,91 @@
         android:layout_marginTop="185dp"
         />
     <TextView
-        android:layout_width="302dp"
+        android:layout_width="wrap_content"
         android:layout_height="57dp"
-        android:fontFamily="@font/open_sans_light"
+
         android:textStyle="bold"
         android:textSize="14sp"
         android:textColor="@color/black"
         android:layout_marginTop="195dp"
         android:layout_marginStart="17dp"
-        android:text="Change is the law of life and those who look \n only to the past or present are certain to miss the future."/>
-    <com.google.android.material.progressindicator.LinearProgressIndicator
-        android:layout_width="312dp"
-        android:layout_height="5dp"
-        android:background="@color/white"
-        app:trackColor="@color/black"
+        android:text="Change is the law of life and those who look\nonly to the past or present are certain to miss the future."/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
         android:layout_marginTop="265dp"
-        />
+        android:background="@color/white"
+        android:indeterminate="false"
+        android:progress="5"
+        android:progressDrawable="@drawable/custom_progressbar_rulesfragment"
+        app:trackColor="@color/black" />
+
     <TextView
         android:layout_width="132dp"
         android:layout_height="19dp"
         android:layout_marginTop="275dp"
         android:text="You’re almost there."
         android:layout_marginStart="16dp"/>
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/incomplete_task_picture"
+        android:layout_width="15.93dp"
+        android:layout_height="15.93dp"
+        android:src="@drawable/cancel"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="347dp"/>
+
+    <ImageView
+
+        android:id="@+id/completePicFull"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/completecircle"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="340dp"/>
+
 
     <TextView
+        android:id="@+id/water_text"
+        android:clickable="true"
+        android:focusable="true"
         android:layout_width="212dp"
         android:layout_height="26dp"
         android:layout_marginStart="58dp"
         android:layout_marginTop="347dp"
-        android:fontFamily="@font/open_sans_light"
+
         android:textStyle="bold"
         android:text="Take a progress picture."
         android:textColor="@color/black" />
+    <TextView
+        android:id="@+id/progress_picture_update"
+        android:layout_width="30dp"
+        android:layout_height="17dp"
+        android:text="1"
+        android:layout_marginTop="349.5dp"
+        android:layout_marginStart="303dp"
+        />
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="17dp"
+        android:text="/1"
+        android:layout_marginTop="349.5dp"
+        android:layout_marginStart="310dp"
+        />
 
     <ImageView
+        android:id="@+id/progress_picture_update_btn"
         android:layout_width="21dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="350dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="330dp"
         android:layout_marginTop="349.5dp"
-        android:src="@drawable/rules_task_select" />
+        android:src="@drawable/forward_arrow"
+         />
+
 
     <View
         android:layout_width="match_parent"
@@ -110,30 +173,128 @@
         android:background="#CBCBCB"
         android:layout_marginTop="370dp"
         />
-
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/incomplete_task_water"
+        android:layout_width="15.93dp"
+        android:layout_height="15.93dp"
+        android:src="@drawable/cancel"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="387dp"/>
+    <ImageView
+        android:id="@+id/completeWater75"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/_5percentf"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="380dp"/>
+    <ImageView
+        android:id="@+id/completeWaterFull"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/completecircle"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="380dp"/>
+    <ImageView
+        android:id="@+id/completeWaterHalf"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/halfcomplete"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="380dp"/>
+    <ImageView
+        android:id="@+id/completeWaterQuarter"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/quarter"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="380dp"/>
     <TextView
         android:text="Drink 1 gallon of water."
         android:layout_width="212dp"
         android:layout_height="26dp"
         android:textColor="@color/black"
         android:layout_marginTop="387dp"
-        android:fontFamily="@font/open_sans_light"
+
         android:textStyle="bold"
         android:layout_marginStart="58dp"/>
+    <TextView
+        android:id="@+id/progress_drink_gallon_text"
+        android:layout_width="30dp"
+        android:layout_height="17dp"
+        android:text="0"
+        android:layout_marginTop="387dp"
+        android:layout_marginStart="310dp"
+
+        />
+    <TextView
+    android:layout_width="30dp"
+    android:layout_height="17dp"
+    android:text="/5"
+    android:layout_marginTop="387dp"
+    android:layout_marginStart="320dp"/>
     <ImageView
+        android:id="@+id/progress_water_btn"
         android:layout_width="21dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="350dp"
+        android:layout_height="16dp"
         android:layout_marginTop="387.5dp"
-        android:src="@drawable/rules_task_select" />
+        android:layout_marginStart="330dp"
+        android:src="@drawable/forward_arrow" />
+    =
+
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="#CBCBCB"
         android:layout_marginTop="410dp"
         />
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/incomplete_task_outdoor_workout"
+        android:layout_width="15.93dp"
+        android:layout_height="15.93dp"
+        android:src="@drawable/cancel"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="427dp"/>
+    <ImageView
+        android:id="@+id/completeWorkoutOutside75"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/_5percentf"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="420dp"/>
+    <ImageView
+        android:id="@+id/completeWorkoutOutsideFull"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/completecircle"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="420dp"/>
+    <ImageView
+        android:id="@+id/completeWorkoutOutsideHalf"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/halfcomplete"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="420dp"/>
+    <ImageView
+        android:id="@+id/completeWorkoutOutsideQuarter"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/quarter"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="420dp"/>
+
     <TextView
-        android:fontFamily="@font/open_sans_light"
+
         android:textStyle="bold"
         android:text="Workout outside for 45 minutes. "
         android:layout_width="212dp"
@@ -141,41 +302,159 @@
         android:layout_height="26dp"
         android:layout_marginTop="427dp"
         android:layout_marginStart="58dp"/>
+    <TextView
+        android:id="@+id/progress_workout_outside_text"
+        android:layout_width="30dp"
+        android:layout_height="17dp"
+        android:text="0"
+        android:layout_marginTop="427dp"
+        android:layout_marginStart="310dp"
+        />
+    <TextView
+
+        android:layout_width="30dp"
+        android:layout_height="17dp"
+        android:text="/1"
+        android:layout_marginTop="427dp"
+        android:layout_marginStart="320dp"
+        />
     <ImageView
+        android:id="@+id/progress_workout_outsidebtn"
         android:layout_width="21dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="350dp"
-        android:layout_marginTop="427.5dp"
-        android:src="@drawable/rules_task_select" />
+        android:layout_height="17dp"
+        android:layout_marginStart="330dp"
+        android:src="@drawable/forward_arrow"
+        android:layout_marginTop="427.5dp" />
+
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="#CBCBCB"
         android:layout_marginTop="450dp"
         />
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/incomplete_task_indoor_workout"
+        android:layout_width="15.93dp"
+        android:layout_height="15.93dp"
+        android:src="@drawable/cancel"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="467dp"/>
+    <ImageView
+        android:id="@+id/completeWorkoutInside75"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/_5percentf"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="460dp"/>
+    <ImageView
+        android:id="@+id/completeWorkoutInsideFull"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/completecircle"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="460dp"/>
+    <ImageView
+        android:id="@+id/completeWorkoutInsideHalf"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/halfcomplete"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="460dp"/>
+    <ImageView
+        android:id="@+id/completeWorkoutInsideQuarter"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/quarter"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="460dp"/>
     <TextView
         android:text="Workout inside for 45 minutes. "
-        android:fontFamily="@font/open_sans_light"
+
         android:textStyle="bold"
         android:layout_width="212dp"
         android:layout_height="26dp"
         android:textColor="@color/black"
         android:layout_marginTop="467dp"
         android:layout_marginStart="58dp"/>
+    <TextView
+        android:id="@+id/progress_workout_inside_text"
+        android:layout_width="30dp"
+        android:layout_height="17dp"
+        android:text=""
+        android:layout_marginTop="467dp"
+        android:layout_marginStart="310dp"
+        />
+    <TextView
+
+        android:layout_width="30dp"
+        android:layout_height="17dp"
+        android:text="/1"
+        android:layout_marginTop="467dp"
+        android:layout_marginStart="320dp"
+        />
     <ImageView
+        android:id="@+id/progress_workout_inside_btn"
         android:layout_width="21dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="350dp"
-        android:layout_marginTop="467.5dp"
-        android:src="@drawable/rules_task_select" />
+        android:layout_height="17dp"
+        android:layout_marginStart="330dp"
+        android:src="@drawable/forward_arrow"
+        android:layout_marginTop="467.5dp" />
+
+
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="#CBCBCB"
         android:layout_marginTop="490dp"
         />
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/incomplete_task_book"
+        android:layout_width="15.93dp"
+        android:layout_height="15.93dp"
+        android:src="@drawable/cancel"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="507dp"/>
+    <ImageView
+        android:id="@+id/completebook75"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/_5percentf"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="500dp"/>
+    <ImageView
+        android:id="@+id/completebookFull"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/completecircle"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="500dp"/>
+    <ImageView
+        android:id="@+id/completebookHalf"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/halfcomplete"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="500dp"/>
+    <ImageView
+        android:id="@+id/completebookQuarter"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/quarter"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="500dp"/>
+
     <TextView
-        android:fontFamily="@font/open_sans_light"
+
         android:textStyle="bold"
         android:text="Read 10 pages from a book."
         android:layout_width="212dp"
@@ -183,20 +462,76 @@
         android:textColor="@color/black"
         android:layout_marginTop="507dp"
         android:layout_marginStart="58dp"/>
+    <TextView
+        android:id="@+id/progress_bookpage_text"
+        android:layout_width="30dp"
+        android:layout_height="17dp"
+        android:text="0"
+        android:layout_marginTop="507dp"
+        android:layout_marginStart="303dp"
+        />
+    <TextView
+        android:layout_width="30dp"
+        android:layout_height="17dp"
+        android:text="/10"
+        android:layout_marginTop="507dp"
+        android:layout_marginStart="314dp"/>
     <ImageView
+        android:id="@+id/progress_bookpage_btn"
         android:layout_width="21dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="350dp"
-        android:layout_marginTop="507.5dp"
-        android:src="@drawable/rules_task_select" />
+        android:layout_height="17dp"
+        android:layout_marginStart="330dp"
+        android:src="@drawable/forward_arrow"
+        android:layout_marginTop="507.5dp"/>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="#CBCBCB"
         android:layout_marginTop="530dp"
         />
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/incomplete_task_diet"
+        android:layout_width="15.93dp"
+        android:layout_height="15.93dp"
+        android:src="@drawable/cancel"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="547dp"/>
+    <ImageView
+        android:id="@+id/completediet75"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/_5percentf"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="540dp"/>
+    <ImageView
+        android:id="@+id/completedietFull"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/completecircle"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="540dp"/>
+    <ImageView
+        android:id="@+id/completedietHalf"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/halfcomplete"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="540dp"/>
+    <ImageView
+        android:id="@+id/completedietQuarter"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/quarter"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="540dp"/>
     <TextView
-        android:fontFamily="@font/open_sans_light"
+
         android:textStyle="bold"
         android:text="Follow a proper diet plan."
         android:layout_width="212dp"
@@ -204,20 +539,80 @@
         android:textColor="@color/black"
         android:layout_marginTop="547dp"
         android:layout_marginStart="58dp"/>
+    <TextView
+        android:id="@+id/progress_meal_text"
+        android:layout_width="30dp"
+        android:layout_height="17dp"
+        android:text="0"
+
+        android:layout_marginTop="547dp"
+        android:layout_marginStart="310dp"
+        />
+    <TextView
+
+        android:layout_width="30dp"
+        android:layout_height="17dp"
+        android:text="/1"
+        android:layout_marginTop="547dp"
+        android:layout_marginStart="320dp"
+        />
     <ImageView
+        android:id="@+id/progress_meal_btn"
         android:layout_width="21dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="350dp"
-        android:layout_marginTop="547.5dp"
-        android:src="@drawable/rules_task_select" />
+        android:layout_height="17dp"
+        android:layout_marginStart="330dp"
+        android:src="@drawable/forward_arrow"
+        android:layout_marginTop="547.5dp"/>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="#CBCBCB"
         android:layout_marginTop="570dp"
         />
+
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/incomplete_task_alcohol"
+        android:layout_width="15.93dp"
+        android:layout_height="15.93dp"
+        android:src="@drawable/cancel"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="590dp"/>
+    <ImageView
+        android:id="@+id/completealcohol75"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/_5percentf"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="580dp"/>
+    <ImageView
+        android:id="@+id/completealcoholFull"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/completecircle"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="580dp"/>
+    <ImageView
+        android:id="@+id/completealcoholHalf"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/halfcomplete"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="580dp"/>
+    <ImageView
+        android:id="@+id/completealcoholQuarter"
+        android:visibility="invisible"
+        android:layout_width="29dp"
+        android:layout_height="29dp"
+        android:src="@drawable/quarter"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="580dp"/>
     <TextView
-        android:fontFamily="@font/open_sans_light"
+
         android:textStyle="bold"
         android:text="No alcohol or cheat meals."
         android:textColor="@color/black"
@@ -226,15 +621,25 @@
         android:layout_marginTop="587dp"
         android:layout_marginStart="58dp"/>
     <ImageView
+        android:id="@+id/progress_alcohol_btn"
         android:layout_width="21dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="350dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="330dp"
+        android:src="@drawable/forward_arrow"
+        android:layout_marginTop="587.5dp"/>
+    <TextView
+        android:id="@+id/progress_alcohol_text"
+        android:layout_width="30dp"
+        android:layout_height="17dp"
+        android:text="0"
         android:layout_marginTop="587.5dp"
-        android:src="@drawable/rules_task_select" />
+        android:layout_marginStart="310dp"
+        />
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:background="#CBCBCB"
         android:layout_marginTop="610dp"
         />
+
 </RelativeLayout>

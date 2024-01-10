@@ -2,12 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/profile_bg"
         android:layout_centerInParent="true"
-        />
+        android:src="@drawable/profile_bg" />
 
     <TextView
         android:layout_width="249sp"
@@ -41,13 +41,15 @@ manage statistics and grow with the community."
         android:layout_marginStart="235dp"
         android:src="@drawable/profile_about_icon"/>
     <TextView
+        android:id="@+id/aboutTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="About"
-        android:fontFamily="@font/open_sans_light"
+
         android:layout_marginTop="518.5dp"
         android:layout_marginStart="265dp"
         android:textSize="16sp"
         android:textColor="@color/black_project"
         />
+
 </RelativeLayout>

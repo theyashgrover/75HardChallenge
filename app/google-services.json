@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "480104366664",
+    "project_id": "hard-challenge-e923a",
+    "storage_bucket": "hard-challenge-e923a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:480104366664:android:d7a83c9245bbc5d1e84e7d",
+        "android_client_info": {
+          "package_name": "com.example.a75hardchallenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "480104366664-mdli04ur0n90u1ebjfe8bai6jirktvar.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXN9fA4Xxm-yuh1CTQv97xy0C8ulhpedE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "480104366664-mdli04ur0n90u1ebjfe8bai6jirktvar.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
